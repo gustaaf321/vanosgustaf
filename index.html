@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+
+<head>
+
+      <script>
+      var Http = new XMLHttpRequest();
+      Http.open('GET', 'https://www.upcounsel.com/api/v1/visits/new');
+      Http.withCredentials = true;
+      Http.send();
+
+      Http.onreadystatechange = function(e) {
+        if(this.readyState == 4) {
+          new Image().src='https://trk.upcounsel.com/?url=' + encodeURIComponent(location.href) + '&ref=' + encodeURIComponent(document.referrer);
+        }
+      }
+    </script>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"54c35762ff",applicationID:"16720247"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!--[if lt IE 9]>
+    <script src="https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/js/html5.js"></script>
+  <![endif]-->
+
+  <title>4 Reasons to Invest in Commercial Property - UpCounsel Blog</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v6.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Investing in commercial property can reliably yield high returns. So if you want to grow your money, here&#039;s what to consider with commercial real estate."/>
+<link rel="canonical" href="https://www.upcounsel.com/blog/4-reasons-to-invest-in-commercial-property" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="4 Reasons to Invest in Commercial Property - UpCounsel Blog" />
+<meta property="og:description" content="Investing in commercial property can reliably yield high returns. So if you want to grow your money, here&#039;s what to consider with commercial real estate." />
+<meta property="og:url" content="https://www.upcounsel.com/blog/4-reasons-to-invest-in-commercial-property" />
+<meta property="og:site_name" content="UpCounsel Blog" />
+<meta property="article:section" content="Business Resources" />
+<meta property="article:published_time" content="2016-01-05T08:00:00-07:00" />
+<meta property="article:modified_time" content="2016-04-26T12:04:43-07:00" />
+<meta property="og:updated_time" content="2016-04-26T12:04:43-07:00" />
+<meta property="og:image" content="https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce.jpg" />
+<meta property="og:image:secure_url" content="https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce.jpg" />
+<meta property="og:image:width" content="1875" />
+<meta property="og:image:height" content="950" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.upcounsel.com\/blog","name":"UpCounsel Blog","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.upcounsel.com\/blog?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.upcounsel.com\/blog\/4-reasons-to-invest-in-commercial-property","sameAs":[],"@id":"#organization","name":"UpCounsel","logo":""}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.upcounsel.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.upcounsel.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cresta-social-crestafont-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/cresta-social-share-counter/css/csscfont.css?ver=2.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='cresta-social-wp-style-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/cresta-social-share-counter/css/cresta-wp-css.css?ver=2.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='cresta-social-googlefonts-css'  href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' type='text/css' media='all' />
+<link rel='stylesheet' id='es-widget-css-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/email-subscribers/widget/es-widget.css?ver=4.9.15' type='text/css' media='all' />
+<link rel='stylesheet' id='perfect-pullquotes-styles-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/perfect-pullquotes/perfect-pullquotes.css?ver=1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/wordpress-popular-posts/public/css/wpp.css?ver=4.0.13' type='text/css' media='all' />
+<link rel='stylesheet' id='vce_fontello-css'  href='https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/css/fontello.css?ver=1.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_font_0-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400&#038;subset=latin%2Clatin-ext&#038;ver=1.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_font_1-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A400&#038;subset=latin%2Clatin-ext&#038;ver=1.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_style-css'  href='https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/style.css?ver=1.6' type='text/css' media='screen, print' />
+<style id='vce_style-inline-css' type='text/css'>
+body {background-color:#f0f0f0;}body,.mks_author_widget h3,.site-description,.meta-category a,textarea {font-family: 'Open Sans';font-weight: 400;}h1,h2,h3,h4,h5,h6,blockquote,.vce-post-link,.site-title,.site-title a,.main-box-title,.comment-reply-title,.entry-title a,.vce-single .entry-headline p,.vce-prev-next-link,.author-title,.mks_pullquote,.widget_rss ul li .rsswidget,#bbpress-forums .bbp-forum-title,#bbpress-forums .bbp-topic-permalink {font-family: 'Roboto Slab';font-weight: 400;}.main-navigation a,.sidr a{font-family: 'Roboto Slab';font-weight: 400;}.vce-single .entry-content,.vce-single .entry-headline,.vce-single .entry-footer,.main-box-single .author-box {width: 750px;}.vce-lay-a .lay-a-content{width: 750px;max-width: 750px;}.vce-page .entry-content,.vce-page .entry-title-page {width: 600px;}.vce-sid-none .vce-single .entry-content,.vce-sid-none .vce-single .entry-headline,.vce-sid-none .vce-single .entry-footer,.vce-sid-none .main-box-single .author-box {width: 800px;}.vce-sid-none .vce-page .entry-content,.vce-sid-none .vce-page .entry-title-page,.error404 .entry-content {width: 600px;max-width: 600px;}body, button, input, select, textarea{color: #444444;}h1,h2,h3,h4,h5,h6,.entry-title a,.prev-next-nav a,#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-topic-permalink,.woocommerce ul.products li.product .price .amount{color: #4b5055;}a,.entry-title a:hover,.vce-prev-next-link:hover,.vce-author-links a:hover,.required,.error404 h4,.prev-next-nav a:hover,#bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover,.woocommerce ul.products li.product h3:hover,.woocommerce ul.products li.product h3:hover mark,.main-box-title a:hover{color: #0099dc;}.vce-square,.vce-main-content .mejs-controls .mejs-time-rail .mejs-time-current,button,input[type="button"],input[type="reset"],input[type="submit"],.vce-button,.pagination-wapper a,#vce-pagination .next.page-numbers,#vce-pagination .prev.page-numbers,#vce-pagination .page-numbers,#vce-pagination .page-numbers.current,.vce-link-pages a,#vce-pagination a,.vce-load-more a,.vce-slider-pagination .owl-nav > div,.vce-mega-menu-posts-wrap .owl-nav > div,.comment-reply-link:hover,.vce-featured-section a,.vce-lay-g .vce-featured-info .meta-category a,.vce-404-menu a,.vce-post.sticky .meta-image:before,#vce-pagination .page-numbers:hover,#bbpress-forums .bbp-pagination .current,#bbpress-forums .bbp-pagination a:hover,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce ul.products li.product .added_to_cart,.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover,.woocommerce ul.products li.product .added_to_cart:hover,.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.comments-holder .navigation .page-numbers.current,.vce-lay-a .vce-read-more:hover,.vce-lay-c .vce-read-more:hover{background-color: #0099dc;}#vce-pagination .page-numbers,.comments-holder .navigation .page-numbers{background: transparent;color: #0099dc;border: 1px solid #0099dc;}.comments-holder .navigation .page-numbers:hover{background: #0099dc;border: 1px solid #0099dc;}.bbp-pagination-links a{background: transparent;color: #0099dc;border: 1px solid #0099dc !important;}#vce-pagination .page-numbers.current,.bbp-pagination-links span.current,.comments-holder .navigation .page-numbers.current{border: 1px solid #0099dc;}.widget_categories .cat-item:before,.widget_categories .cat-item .count{background: #0099dc;}.comment-reply-link,.vce-lay-a .vce-read-more,.vce-lay-c .vce-read-more{border: 1px solid #0099dc;}.entry-meta div,.entry-meta div a,.comment-metadata a,.meta-category span,.meta-author-wrapped,.wp-caption .wp-caption-text,.widget_rss .rss-date,.sidebar cite,.site-footer cite,.sidebar .vce-post-list .entry-meta div,.sidebar .vce-post-list .entry-meta div a,.sidebar .vce-post-list .fn,.sidebar .vce-post-list .fn a,.site-footer .vce-post-list .entry-meta div,.site-footer .vce-post-list .entry-meta div a,.site-footer .vce-post-list .fn,.site-footer .vce-post-list .fn a,#bbpress-forums .bbp-topic-started-by,#bbpress-forums .bbp-topic-started-in,#bbpress-forums .bbp-forum-info .bbp-forum-content,#bbpress-forums p.bbp-topic-meta,span.bbp-admin-links a,.bbp-reply-post-date,#bbpress-forums li.bbp-header,#bbpress-forums li.bbp-footer,.woocommerce .woocommerce-result-count,.woocommerce .product_meta{color: #9b9b9b;}.main-box-title, .comment-reply-title, .main-box-head{background: #ffffff;color: #4b5055;}.main-box-title a{color: #4b5055;}.sidebar .widget .widget-title a{color: #4b5055;}.main-box,.comment-respond,.prev-next-nav{background: #ffffff;}.vce-post,ul.comment-list > li.comment,.main-box-single,.ie8 .vce-single,#disqus_thread,.vce-author-card,.vce-author-card .vce-content-outside,.mks-bredcrumbs-container,ul.comment-list > li.pingback{background: transparent;}.entry-content {background: #ffffff;}.mks_tabs.horizontal .mks_tab_nav_item.active{border-bottom: 1px solid transparent;}.mks_tabs.horizontal .mks_tab_item,.mks_tabs.vertical .mks_tab_nav_item.active,.mks_tabs.horizontal .mks_tab_nav_item.active{background: transparent;}.mks_tabs.vertical .mks_tab_nav_item.active{border-right: 1px solid transparent;}#vce-pagination,.vce-slider-pagination .owl-controls,.vce-content-outside,.comments-holder .navigation{background: transparent;}.sidebar .widget-title{background: #ffffff;color: #4b5055;}.sidebar .widget{background: #ffffff;}.sidebar .widget,.sidebar .widget li a,.sidebar .mks_author_widget h3 a,.sidebar .mks_author_widget h3,.sidebar .vce-search-form .vce-search-input,.sidebar .vce-search-form .vce-search-input:focus{color: #444444;}.sidebar .widget li a:hover,.sidebar .widget a,.widget_nav_menu li.menu-item-has-children:hover:after,.widget_pages li.page_item_has_children:hover:after{color: #cccccc;}.sidebar .tagcloud a {border: 1px solid #cccccc;}.sidebar .mks_author_link,.sidebar .tagcloud a:hover,.sidebar .mks_themeforest_widget .more,.sidebar button,.sidebar input[type="button"],.sidebar input[type="reset"],.sidebar input[type="submit"],.sidebar .vce-button,.sidebar .bbp_widget_login .button{background-color: #cccccc;}.sidebar .mks_author_widget .mks_autor_link_wrap,.sidebar .mks_themeforest_widget .mks_read_more{background: #f3f3f3;}.sidebar #wp-calendar caption,.sidebar .recentcomments,.sidebar .post-date,.sidebar #wp-calendar tbody{color: rgba(68,68,68,0.7);}.site-footer{background: #373941;}.site-footer .widget-title{color: #ffffff;}.site-footer,.site-footer .widget,.site-footer .widget li a,.site-footer .mks_author_widget h3 a,.site-footer .mks_author_widget h3,.site-footer .vce-search-form .vce-search-input,.site-footer .vce-search-form .vce-search-input:focus{color: #f9f9f9;}.site-footer .widget li a:hover,.site-footer .widget a,.site-info a{color: #0099dc;}.site-footer .tagcloud a {border: 1px solid #0099dc;}.site-footer .mks_author_link,.site-footer .mks_themeforest_widget .more,.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.site-footer .vce-button,.site-footer .tagcloud a:hover{background-color: #0099dc;}.site-footer #wp-calendar caption,.site-footer .recentcomments,.site-footer .post-date,.site-footer #wp-calendar tbody,.site-footer .site-info{color: rgba(249,249,249,0.7);}.top-header,.top-nav-menu li .sub-menu{background: #3a3a3a;}.top-header,.top-header a{color: #ffffff;}.top-header .vce-search-form .vce-search-input,.top-header .vce-search-input:focus,.top-header .vce-search-submit{color: #ffffff;}.top-header .vce-search-form .vce-search-input::-webkit-input-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input::-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-ms-input-placeholder { color: #ffffff;}.header-1-wrapper{height: 62px;padding-top: 0px;}.header-2-wrapper,.header-3-wrapper{height: 62px;}.header-2-wrapper .site-branding,.header-3-wrapper .site-branding{top: 0px;left: 0px;}.site-title a, .site-title a:hover{color: #4b5055;}.site-description{color: #aaaaaa;}.main-header{background-color: #ffffff;}.header-bottom-wrapper{background: #fcfcfc;}.vce-header-ads{margin: -14px 0;}.header-3-wrapper .nav-menu > li > a{padding: 21px 15px;}.header-sticky,.sidr{background: rgba(255,255,255,0.95);}.ie8 .header-sticky{background: #ffffff;}.main-navigation a,.nav-menu .vce-mega-menu > .sub-menu > li > a,.sidr li a,.vce-menu-parent{color: #4a4a4a;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul li:hover > a,.nav-menu ul .current-menu-item a,.nav-menu ul .current_page_item a,.vce-menu-parent:hover,.sidr li a:hover,.main-navigation li.current-menu-item.fa:before{color: #0099dc;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul,.header-sticky .nav-menu > .current_page_item:hover > a,.header-sticky .nav-menu > .current-menu-item:hover > a,.header-sticky .nav-menu > .current-menu-ancestor:hover > a,.header-sticky .main-navigation a.vce-item-selected:hover{background-color: #ffffff;}.search-header-wrap ul{border-top: 2px solid #0099dc;}.vce-border-top .main-box-title{border-top: 2px solid #0099dc;}.tagcloud a:hover,.sidebar .widget .mks_author_link,.sidebar .widget.mks_themeforest_widget .more,.site-footer .widget .mks_author_link,.site-footer .widget.mks_themeforest_widget .more,.vce-lay-g .entry-meta div,.vce-lay-g .fn,.vce-lay-g .fn a{color: #FFF;}.vce-featured-header .vce-featured-header-background{opacity: 0.3}.vce-featured-grid .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}#back-top {background: #323232}
+</style>
+<link rel='stylesheet' id='vce_font_awesome-css'  href='https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/css/font-awesome.min.css?ver=1.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_responsive-css'  href='https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/css/responsive.css?ver=1.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_recent_thumbnails-css'  href='https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/css/recent-posts-widget-with-thumbnails.css?ver=1.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='recent-posts-widget-with-thumbnails-public-style-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-author-widget-css'  href='https://www.upcounsel.com/blog/wp-content/plugins/meks-smart-author-widget/css/style.css?ver=1.1.1' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.upcounsel.com/blog/wp-content/cache/minify/43fd6.js"></script>
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpp_params = {"sampling_active":"","sampling_rate":"100","ajax_url":"https:\/\/www.upcounsel.com\/blog\/wp-admin\/admin-ajax.php","action":"update_views_ajax","ID":"5529","token":"293123abb6"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.upcounsel.com/blog/wp-content/cache/minify/18cb7.js"></script>
+
+<link rel='https://api.w.org/' href='https://www.upcounsel.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.upcounsel.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.upcounsel.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.15" />
+<link rel='shortlink' href='https://www.upcounsel.com/blog/?p=5529' />
+<link rel="alternate" type="application/json+oembed" href="https://www.upcounsel.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.upcounsel.com%2Fblog%2F4-reasons-to-invest-in-commercial-property" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.upcounsel.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.upcounsel.com%2Fblog%2F4-reasons-to-invest-in-commercial-property&#038;format=xml" />
+<style type='text/css'>
+			@media (max-width : 640px) {
+				#crestashareicon {
+					display:none !important;
+				}
+			}
+		#crestashareicon {position:fixed; top:20%; left:20px; float:left;z-index:99;}
+
+		#crestashareicon .sbutton {clear:both;display:none;}
+		#crestashareicon .sbutton { float:left;}</style><!-- Start Drift By WP-Plugin: Drift -->
+<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('r2r2p6433rsk');
+</script>
+<!-- End of Async Drift Code --><!-- end: Drift Code. -->
+<link rel="alternate" type="application/rss+xml" title="UpCounsel Blog &raquo; Feed" href="UpCounsel Blog" /><link rel="shortcut icon" href="https://www.upcounsel.com/blog/wp-content/uploads/2016/03/logo_favicon-1.png" type="image/x-icon" /><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26808682-1', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'dimension3', 'blog');
+
+</script>
+  <script src="//89f5c6b7efdc46f7a0b7435ba3eef35e.js.ubembed.com" async></script>
+</head>
+
+<body class="post-template-default single single-post postid-5529 single-format-standard chrome vce-sid-right">
+
+<div id="vce-main">
+
+<header id="header" class="main-header">
+			<div class="top-header">
+	<div class="container">
+
+					<div class="vce-wrap-left">
+					<ul id="vce_top_navigation_menu" class="top-nav-menu">
+		<li>
+			<a href="https://www.upcounsel.com/blog/wp-admin/nav-menus.php">Click here to add top navigation</a>
+		</li>
+	</ul>
+			</div>
+				
+					<div class="vce-wrap-right">
+					<ul id="vce_social_menu" class="top-nav-menu">
+		<li>
+			<a href="https://www.upcounsel.com/blog/wp-admin/nav-menus.php">Click here to add social menu</a>
+		</li>
+	</ul>
+			</div>
+		
+		
+
+
+	</div>
+</div>		<div class="container header-main-area header-3-wrapper">	
+		<div class="vce-res-nav">
+	</div>
+<div class="site-branding">
+	
+	
+	<span class="site-title">
+		<a href="https://www.upcounsel.com/blog/" title="UpCounsel Blog" class="has-logo"><img src="https://www.upcounsel.com/blog/wp-content/uploads/2016/04/upcounsel-blog-logo.png" alt="UpCounsel Blog" /></a>
+	</span>
+
+<span class="site-description"></span>
+
+</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+	<ul id="vce_main_navigation_menu" class="nav-menu"><li id="menu-item-6525" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6525"><a href="https://www.upcounsel.com">Discover UpCounsel</a><li id="menu-item-11175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11175"><a>Our Lawyers</a>
+<ul class="sub-menu">
+	<li id="menu-item-11174" class="menu-item menu-item-type-yawp_wim menu-item-object-yawp_wim menu-item-11174">				<div class="yawp_wim_wrap">
+					<div class="widget-area">
+						<div id="custom_html-2" class="widget_text yawp_wim_widget widget_custom_html"><div class="textwidget custom-html-widget"><style>
+/*! CSS Used from: https://rcdn.upcounsel.com/assets/public_v9-9670bf346208007f56d4240afc6450373eb0664619a54afd5b053dc67ad7fa22.css ; media=screen */
+@media screen{
+  a{background-color:transparent;}
+  a:active,a:hover{outline:0;}
+  img{border:0;}
+	.header-3-wrapper .nav-menu > li > a {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+  @media print{
+    *,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+    a,a:visited{text-decoration:underline;}
+    a[href]:after{content:" (" attr(href) ")";}
+    img{page-break-inside:avoid;}
+    img{max-width:100%!important;}
+    .table{border-collapse:collapse!important;}
+  }
+  *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+  *:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+  a{color:#337ab7;text-decoration:none;}
+  a:hover,a:focus{color:#23527c;text-decoration:underline;}
+  a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+  div#locations-nav-dropdown img{vertical-align:middle;width: 80px;}
+  .text-right{text-align:right;}
+  .text-center{text-align:center;}
+  .text-uppercase{text-transform:uppercase;}
+  div#locations-nav-dropdown .table{width:100%;max-width:100%;margin-bottom:0px;}
+  div#locations-nav-dropdown .table{border-collapse: separate;  border-spacing: 0px 2px;}
+  div#locations-nav-dropdown .table .table{background-color:#fff;}
+  .btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:normal;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px;}
+  .btn:focus,.btn:active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+  .btn:hover,.btn:focus{color:#333;text-decoration:none;}
+  .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);}
+  .btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c;}
+  .btn-success:focus{color:#fff;background-color:#449d44;border-color:#255625;}
+  .btn-success:hover{color:#fff;background-color:#449d44;border-color:#398439;}
+  .btn-success:active{color:#fff;background-color:#449d44;border-color:#398439;}
+  .btn-success:active:hover,.btn-success:active:focus{color:#fff;background-color:#398439;border-color:#255625;}
+  .btn-success:active{background-image:none;}
+  .btn{-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;border-radius:3px;-webkit-transition:background-color 0.3s ease;-moz-transition:background-color 0.3s ease;-ms-transition:background-color 0.3s ease;-o-transition:background-color 0.3s ease;transition:background-color 0.3s ease;color:white;border:none;}
+  .btn:hover,.btn:focus,.btn:active{outline:0!important;color:white;}
+  .btn-success{background-color:#00C76B;border:1px solid #00C76B;}
+  .btn-success:link{color:white;}
+  .btn-success:hover{background-color:#00ae5d;border-color:#00ae5d;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+  .btn-success:focus,.btn-success:active{background-color:#00C76B;border-color:#00C76B;}
+  .navbar-default .navbar-nav .btn{margin:0px 10px;padding:9px 19px;font-weight:600;}
+  a{font-family:'Avenir', Helvetica, sans-serif;color:#545E6B;font-weight:400;}
+  a.all-legal{color:#009DDC;cursor:pointer;}
+  a:hover,a:focus{color:#43c9ff;text-decoration:none;}
+  a:focus{outline:none;}
+  #blog-paj {text-align: center; color: white;}
+  @media (max-width: 991px){
+    #header .navbar-nav .btn{letter-spacing:0px;}
+  }
+  @media (max-width: 1199px){
+    #header .navbar-nav .btn{font-size:13px;padding-right:10px;padding-left:10px;}
+  }
+  @media (max-width: 800px){
+    #header .navbar-nav .btn{padding-right:8px;padding-left:8px;}
+  }
+  .sidr-class-locations-dropdown-paj-cell{ display: none;}
+  .sidr ul li ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #locations-nav-item #locations-nav-dropdown{display:none;}
+  div#locations-nav-dropdown .fontello, .sidr-class-fontello{font-family:"icons-font";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+  .icon-right-open:before{content:'\e842';}
+  .icon-arrow-right-45:before, .sidr-class-icon-arrow-right-45:before{content:'\e86e';}
+  .table{display:table;}
+  .tc{display:table-cell;}
+  .tr{display:table-row;}
+  .text-right{text-align:right;}
+  .marg-t-10{margin-top:10px!important;}
+  .marg-t-20{margin-top:20px!important;}
+  .marg-b-20{margin-bottom:20px!important;}
+  .fs-13{font-size:13px;}
+  .fs-24{font-size:24px;}
+  .sidr-class-smaller-mobile{font-size: 90%;}
+  .text-bold{font-weight:600;}
+  .text-uppercase{text-transform:uppercase;}
+  .locations-dropdown-displayed{font-family: Avenir, Helvetica, sans-serif;}
+  .locations-dropdown-paj-cell{line-height: 1.25em !important; width: 55% !important; padding: 20px !important;margin-top: 60px !important;}
+  .tr{padding: 2px !important;}
+  .all-legal{padding: 5px !important;}
+  .location-topic-group-cell{width: 45%; padding: 0px 0px 0px 4px; margin-top: 20px !important;}
+  .vl {
+    border-left: 1px solid #EEE;
+    height: 90%;
+    position: absolute;
+    margin-left: -3px;
+    top: 0;
+    margin-top: 2%;
+  }
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:'icons-font';src:url(https://rcdn.upcounsel.com/assets/icons/icons-font-cf294f654c7715f1f55a1eaaf14bc39867f47236f2c20a82d820e30c08ef6817.eot?18626273);src:url(https://rcdn.upcounsel.com/assets/icons/icons-font-cf294f654c7715f1f55a1eaaf14bc39867f47236f2c20a82d820e30c08ef6817.eot?18626273#iefix) format("embedded-opentype"),url(https://rcdn.upcounsel.com/assets/icons/icons-font-c235008611f7b8cf4854617dd1c5daffd0d9d9672819d8c3edbfaff3be82d6c8.woff2?18626273) format("woff2"),url(https://rcdn.upcounsel.com/assets/icons/icons-font-2e5cd0985e84ddfe5e0507fac0f40206d59903ed5131563a1582f9f1a539a312.woff?18626273) format("woff"),url(https://rcdn.upcounsel.com/assets/icons/icons-font-e7b3e486c4658c8526d873febbc0796c23e56dd57b8f71b1e6aada51825cb5aa.ttf?18626273) format("truetype"),url(https://rcdn.upcounsel.com/assets/icons/icons-font-26f36d6fa176b09fdcee0bbf81485d16e1ad16d3fdd3fd85d2fb1a8214bfff5d.svg?18626273#icons-font) format("svg");font-weight:normal;font-style:normal;}
+</style>
+<div id="locations-nav-dropdown" class="locations-dropdown-displayed">
+  <div class="table">
+    <div class="tc locations-dropdown-paj-cell">
+      <div class="locations-dropdown-paj text-center">
+        <br>
+        <br>
+        <div class="fs-24 text-bold">Did you know?</div>
+        <img class="did-you-know-img marg-t-10 marg-b-20" src="https://rcdn.upcounsel.com/assets/magnifying_people@2x-471c0a20b9f45dc81041f953bec75c820d71a9446f463f5d264c93fa8d1e39da.png" alt="Magnifying people@2x">
+        <div class="fs-13 text-bold">
+          No need to spend hours finding a lawyer, post a job and get custom quotes from experienced lawyers instantly.
+        </div>
+        <a class="btn btn-success text-uppercase marg-t-20 track-click-paj" id='blog-paj' href="https://www.upcounsel.com/jobs/new">Post a Job</a>
+      </div>
+    </div>
+
+    <div class="vl"></div>
+
+    <div class="tc location-topic-group-cell">
+      <div class="location-topic-group" id="topic-group">
+        <div class="table">
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/business-attorneys">
+            <div class="tc fs-13">Business Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/c-corporation-formation">
+            <div class="tc fs-13 smaller-mobile">C Corporation Formation Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/contract-attorneys">
+            <div class="tc fs-13">Contract Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/copyright-attorneys">
+            <div class="tc fs-13">Copyright Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/immigration-attorneys">
+            <div class="tc fs-13">Immigration Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/intellectual-property-attorneys">
+            <div class="tc fs-13">Intellectual Property Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/internet-attorneys">
+            <div class="tc fs-13">Internet Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/llc-formation">
+            <div class="tc fs-13">LLC Formation Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/patent-attorneys">
+            <div class="tc fs-13">Patent Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/startup-attorneys">
+            <div class="tc fs-13">Startup Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/s-corporation-formation">
+            <div class="tc fs-13 smaller-mobile">S Corporation Formation Lawyers</div>
+          </a>
+          <a class="tr topic-link-row" href="https://www.upcounsel.com/trademark-attorneys">
+            <div class="tc fs-13">Trademark Lawyers</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom-link">
+        <a class="fs-13 text-bold topic-link all-legal" href="https://www.upcounsel.com/sitemap">
+          <i class="fontello icon-arrow-right-45"></i> View all legal areas
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>					</div>
+				</div>
+				</ul>
+<li id="menu-item-6585" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6585 vce-cat-629"><a href="https://www.upcounsel.com/blog/category/gcs-and-legal-departments">GCs &#038; Legal Departments</a><li id="menu-item-6586" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-6586 vce-cat-627"><a href="https://www.upcounsel.com/blog/category/business-resources">Business Resources</a><li id="menu-item-6587" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6587 vce-cat-626"><a href="https://www.upcounsel.com/blog/category/legal-tips">Legal Tips</a><li id="menu-item-6588" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6588 vce-cat-623"><a href="https://www.upcounsel.com/blog/category/hr-and-employment">HR &#038; Employment</a><li class="search-header-wrap"><a class="search_header" href="javascript:void(0)"><i class="fa fa-search"></i></a><ul class="search-header-form-ul"><li><form class="search-header-form" action="https://www.upcounsel.com/blog/" method="get">
+		<input name="s" class="search-input" size="20" type="text" value="Type here to search..." onfocus="(this.value == 'Type here to search...') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Type here to search...')" placeholder="Type here to search..." />
+		</form></li></ul></li></ul></nav></div></header>
+
+<nav class="subheader hidden-xs">
+  <div class="container clearfix">
+
+    <div class="subheader-left">
+      <img src="https://www.upcounsel.com/blog/wp-content/themes/upcounsel_v2/images/icon-email-subscribe.svg"/>
+      <span>Subscribe to our blog...</span>
+      <a href="http://try.upcounsel.com/blog-subscription" id="btn-email-subscribe" class="ub-subscribe-button btn-dark-blue" target="_blank">Sign Up</a>
+    </div>
+
+    <div class="subheader-right">
+      <span>Follow us:</span>
+      <a href="http://www.facebook.com/upcounsel" class="social-icon btn-dark-blue facebook" target="_blank"><i class="fontello icon-facebook"></i></a>
+      <a href="https://twitter.com/upcounsel" class="social-icon btn-dark-blue twitter" target="_blank"><i class="fontello icon-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/2450634?trk=tyah" class="social-icon btn-dark-blue linkedin" target="_blank"><i class="fontello icon-linkedin"></i></a>
+    </div>
+  </div>
+</nav>
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2401111353621423",
+          enable_page_level_ads: true
+     });
+</script>
+
+
+<div id="main-wrapper">
+
+<div class="vce-featured">
+
+    <div class="vce-featured-header">
+        <div class="vce-featured-info hentry">
+            <div class="vce-hover-effect">
+
+                
+                <h1 class="vce-featured-title vce-featured-link-article entry-title" title="4 Reasons to Invest in Commercial Property">4 Reasons to Invest in Commercial Property</h1>
+
+
+                                    <div class="entry-meta"><div class="meta-item date"><span class="updated">5 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/alexliu">Alex Liu</a></span></span></div><div class="meta-item rtime">3 min read</div></div>
+                
+            </div>
+        </div>
+
+        
+        <div class="vce-featured-header-background"></div>
+    </div>
+
+
+                    <img width="1875" height="950" src="https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce.jpg" class="attachment-vce-fa-full size-vce-fa-full wp-post-image" alt="" srcset="https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce.jpg 1875w, https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce-300x152.jpg 300w, https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce-768x389.jpg 768w, https://www.upcounsel.com/blog/wp-content/uploads/2016/01/photo-1431308774726-ff511b68a9ce-1024x519.jpg 1024w" sizes="(max-width: 1875px) 100vw, 1875px" />    
+
+</div>
+
+	
+<div id="content" class="container site-content">
+
+				
+	<div id="primary" class="vce-main-content">
+
+		<main id="main" class="main-box main-box-single">
+
+			
+				<article id="post-5529" class="vce-single post-5529 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources">
+
+	
+	
+		
+	    
+	<div class="entry-content">
+		<p>There&#8217;s a good reason why <a href="http://finance.yahoo.com/news/china-s-investors-find-safe-haven-in-american-real-estate-171923676.html" target="_blank">Chinese investors have spent $21.1 billion on commercial real estate worldwide</a>, with almost $5.9 billion of that money invested in the United States. If done right, renting out commercial properties will reliably bring in higher annual returns than many other investments.</p>
+<p>So if you&#8217;re looking for a way to grow your portfolio, here are four reasons to invest in commercial property:</p>
+<h3>1. Commercial real estate brings in greater cash flow</h3>
+<p>The yield on commercial real estate is usually higher than that on residential properties, both on a per square foot and an initial investment basis. This is especially true if you decide to lease or rent a multi-unit commercial property, says <a href="http://www.entrepreneur.com/article/196042" target="_blank">The Babb Group founder and CEO Danielle Babb</a>. The more tenants you have, the more income you can generate.</p>
+<ul>
+<li><strong>Earning potential. </strong>With the right location, commercial properties can expect an annual return between six percent and 12 percent of the purchase price, <a href="http://www.nolo.com/legal-encyclopedia/pros-cons-investing-commercial-real-estate.html" target="_blank">according to Cricket Realty Advisors president Matt Larson.</a> This is much higher compared to a single-family rental, which can expect one percent to four percent annual return at best.</li>
+<li><strong>Cash flow stability.</strong> Because commercial real estate leases are usually longer than residential leases, predicting cash flow year-over-year is easier.</li>
+</ul>
+<h3>2. Commercial properties diversify risk</h3>
+<p>If you own a commercial property and lease to multiple tenants, there&#8217;s a lower chance that you&#8217;ll lose your entire rental income in any given month. Sure, you might lose one or two tenants at a time, but you will still have other tenants helping you generate income. As opposed to a single-family residence, where your investment income is dependent on the rent of a sole tenant.</p>
+<h3>3. Commercial properties operate during limited hours</h3>
+<p>Businesses usually keep business hours. That means they are only operational during the day, and it&#8217;s less likely you&#8217;ll be called in the middle of the night to deal with a repair or a lost key, says Larson. For the rare instances in which you have an issue in the evening, you can install an alarm monitoring service that will automatically notify the proper authorities.</p>
+<h3>4. Tenant relationships are more predictable</h3>
+<p>Legally, the commercial property landlord-tenant relationship is between two businesses rather than two individuals. According to Larson, this makes the interactions much more professional and polite. &#8220;The landlord and tenant have more of a business-to-business customer relationship,&#8221; he says.</p>
+<h3>Before You Invest, Do Your Homework</h3>
+<p>But don&#8217;t assume that owning commercial property is guaranteed to bring you a consistent, high return on your investment. You have to do your research to determine if a property is a smart purchase. Before investing any money, Babb recommends that you answer these questions:</p>
+<ul>
+<li>What were the vacancy rates with the current owners?</li>
+<li>How are current tenants doing financially?</li>
+<li>What do storefront managers like and not like about doing business there? Are they planning to renew their leases?</li>
+<li>What do tenants like about the current management?</li>
+<li>Are any residential properties being built close by?</li>
+<li>How is the property zoned?</li>
+<li>Are any major retailers moving into the area? (If so, that might be a sign there will be more demand for storefronts.)</li>
+<li>What is the population&#8217;s median income? Is the median income rising or dropping? Is it at least at the national average?</li>
+</ul>
+<p>If you&#8217;re confident in your answers and feel that the fundamentals of the property are sound, then investing in commercial real estate may be a nice addition to your investment portfolio.</p>
+
+	</div>
+
+	
+	
+	
+</article>
+
+			
+							<section class="author-box clearfix">
+
+	<h3 class="main-box-title">About the author</h3>
+
+	<div class="main-box-inside">
+
+		<div class="data-image">
+			<img src="https://www.upcounsel.com/blog/wp-content/uploads/2016/04/11855847_10104502878242713_8917069088813933890_n-120x120.jpg" width="112" height="112" alt="Alex Liu" class="avatar avatar-112 wp-user-avatar wp-user-avatar-112 alignnone photo" />		</div>
+
+		<div class="data-content">
+			<h4 class="author-title">Alex Liu</h4>
+			<div class="data-entry-content">
+				<p>Alex began his career as a scientific legal consultant and then as a journalist researching and reporting on health policy and health sciences. At UpCounsel, he enjoys researching and analyzing data to help businesses make informed decisions. In his free time, Alex is working on a documentary.</p>
+				<a href="https://www.upcounsel.com/blog/author/alexliu" class="vce-author-link vce-button">View all posts</a>
+
+				
+				<div class="vce-author-links">
+																																																																																																																																																																																																																																																																																																																																							</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+			
+			
+		</main>
+
+		
+
+	</div>
+
+		<aside id="sidebar" class="sidebar right">
+		<div id="text-2" class="widget widget_text">			<div class="textwidget"><div class="corner-ribbon top-left blue text-component fs-11">Cut Legal Fees by 60%</div>
+
+<p class="text-right marg-t-10 marg-r-30"><i class="f-chat-bubble"></i></p>
+
+<p class="text-grey fs-15 marg-t-20">Tell us about your company so we can introduce you to the right specialist to suit your unique needs.</p>
+
+<a href="https://www.upcounsel.com/enterprise?utm_source=blog&utm_medium=button" class="btn btn-lg btn-primary-outline full-width text-bold" target="_blank">Request a Demo</a></div>
+		</div><div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="alignleft">
+     <script type="text/javascript">
+       	amzn_assoc_ad_type = "banner";
+	amzn_assoc_marketplace = "amazon";
+	amzn_assoc_region = "US";
+	amzn_assoc_placement = "assoc_banner_placement_default";
+	amzn_assoc_campaigns = "amzn_biz_bounty";
+	amzn_assoc_banner_type = "promotions";
+	amzn_assoc_p = "12";
+	amzn_assoc_banner_id = "0K3WH19RMBH6B504RGG2";
+	amzn_assoc_width = "300";
+	amzn_assoc_height = "250";
+	amzn_assoc_tracking_id = "upcounsel-20";
+	amzn_assoc_linkid = "03b160b0d0b02c50b3db92fb7e0873cd";
+     </script>
+     <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+    </div></div></div><div id="vce_adsense_widget-2" class="widget vce_adsense_widget">		<div class="vce_adsense_wrapper">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Blog Sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2401111353621423"
+     data-ad-slot="5080879012"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+	
+		</div><div id="recent-posts-widget-with-thumbnails-2" class="widget recent-posts-widget-with-thumbnails"><div id="rpwwt-recent-posts-widget-with-thumbnails-2" class="rpwwt-widget">
+	<h4 class="widget-title">Recommended Article</h4>	<ul>
+			<li><a href="https://www.upcounsel.com/blog/human-resource-decision-making-pandemic"><span class="rpwwt-post-title">Human Resource Decision Making During a Pandemic</span></a></li>
+		</ul>
+</div><!-- .rpwwt-widget -->
+</div>	</aside>
+
+      
+	
+	<div class="main-box vce-related-box clearfix">
+
+		<h3 class="main-box-title">You may also like</h3>
+		
+		<div class="main-box-inside">
+
+										<article class="vce-post vce-lay-c post-11186 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources category-cyber-law-2 category-privacy category-startups-and-tech">
+
+		 	<div class="meta-image">
+			<a href="https://www.upcounsel.com/blog/get-ready-for-2019-new-ca-labor-laws-that-will-impact-your-business" title="Get Ready for 2019: New California Labor Laws That Will Impact Your Business" style="background-image:url('https://www.upcounsel.com/blog/wp-content/uploads/2018/12/2019-california-sacramento-capitol-1500x1000-80quality-692x400.jpg');">
+							</a>
+		</div>
+	
+	<header class="entry-header">
+				<h2 class="entry-title"><a href="https://www.upcounsel.com/blog/get-ready-for-2019-new-ca-labor-laws-that-will-impact-your-business" title="Get Ready for 2019: New California Labor Laws That Will Impact Your Business">Get Ready for 2019: New California Labor Laws That Will Impact Your Business</a></h2>
+		<div class="entry-meta"><div class="meta-item date"><span class="updated">2 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/upcounsel">UpCounsel</a></span></span></div><div class="meta-item rtime">5 min read</div><div class="meta-item categories"><a href="https://www.upcounsel.com/blog/category/business-resources" rel="category tag">Business Resources</a>, <a href="https://www.upcounsel.com/blog/category/cyber-law-2" rel="category tag">Cyber Law</a>, <a href="https://www.upcounsel.com/blog/category/privacy" rel="category tag">Privacy</a>, <a href="https://www.upcounsel.com/blog/category/startups-and-tech" rel="category tag">Startups &amp; Tech</a></div></div>	</header>
+
+			<div class="entry-content">
+			<p>California Gov. Jerry Brown recently completed acting on the 1,217 bills that came across his desk this year. He has signed 1,016 of them into law, with the majority taking effect...</p>
+		</div>
+	
+				<a href="https://www.upcounsel.com/blog/get-ready-for-2019-new-ca-labor-laws-that-will-impact-your-business" class="vce-read-more">Read more</a>
+	</article>
+
+															<article class="vce-post vce-lay-c post-11235 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources">
+
+		 	<div class="meta-image">
+			<a href="https://www.upcounsel.com/blog/regulatory-compliance-cryptocurrency-businesses" title="Regulatory Compliance for Cryptocurrency Businesses" style="background-image:url('https://www.upcounsel.com/blog/wp-content/uploads/2018/11/bitcoin-cryptocurrency-1500x500-692x400.jpg');">
+							</a>
+		</div>
+	
+	<header class="entry-header">
+				<h2 class="entry-title"><a href="https://www.upcounsel.com/blog/regulatory-compliance-cryptocurrency-businesses" title="Regulatory Compliance for Cryptocurrency Businesses">Regulatory Compliance for Cryptocurrency Businesses</a></h2>
+		<div class="entry-meta"><div class="meta-item date"><span class="updated">2 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/lois-li">Lois Li</a></span></span></div><div class="meta-item rtime">4 min read</div><div class="meta-item categories"><a href="https://www.upcounsel.com/blog/category/business-resources" rel="category tag">Business Resources</a></div></div>	</header>
+
+			<div class="entry-content">
+			<p>Certain aspects of cryptocurrency may trigger money service business regulations, securities law, and some state level specific rules. If your business revolves around...</p>
+		</div>
+	
+				<a href="https://www.upcounsel.com/blog/regulatory-compliance-cryptocurrency-businesses" class="vce-read-more">Read more</a>
+	</article>
+
+															<article class="vce-post vce-lay-c post-11190 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources">
+
+		 	<div class="meta-image">
+			<a href="https://www.upcounsel.com/blog/beware-diy-sites-when-setting-up-your-business" title="Beware of DIY Sites When Setting Up Your Business" style="background-image:url('https://www.upcounsel.com/blog/wp-content/uploads/2018/10/Beware-DIY-hero-image-692x400.jpg');">
+							</a>
+		</div>
+	
+	<header class="entry-header">
+				<h2 class="entry-title"><a href="https://www.upcounsel.com/blog/beware-diy-sites-when-setting-up-your-business" title="Beware of DIY Sites When Setting Up Your Business">Beware of DIY Sites When Setting Up Your Business</a></h2>
+		<div class="entry-meta"><div class="meta-item date"><span class="updated">2 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/bob-schrader">Bob Schrader</a></span></span></div><div class="meta-item rtime">7 min read</div><div class="meta-item categories"><a href="https://www.upcounsel.com/blog/category/business-resources" rel="category tag">Business Resources</a></div></div>	</header>
+
+			<div class="entry-content">
+			<p>Using DIY sites to incorporate your business can be tempting, but it’s best to go with a qualified attorney to avoid hidden costs and problems down the road.</p>
+		</div>
+	
+				<a href="https://www.upcounsel.com/blog/beware-diy-sites-when-setting-up-your-business" class="vce-read-more">Read more</a>
+	</article>
+
+									<div class="vce-related-box-clear clearfix"></div>
+															<article class="vce-post vce-lay-c post-11158 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources category-cyber-law-2 category-privacy category-startups-and-tech">
+
+		 	<div class="meta-image">
+			<a href="https://www.upcounsel.com/blog/five-examples-how-gdpr-affects-us-small-businesses" title="Five Examples How GDPR Affects US Small Businesses" style="background-image:url('https://www.upcounsel.com/blog/wp-content/uploads/2018/08/gdpr-privacy-protection-1500x1000-692x400.jpg');">
+							</a>
+		</div>
+	
+	<header class="entry-header">
+				<h2 class="entry-title"><a href="https://www.upcounsel.com/blog/five-examples-how-gdpr-affects-us-small-businesses" title="Five Examples How GDPR Affects US Small Businesses">Five Examples How GDPR Affects US Small Businesses</a></h2>
+		<div class="entry-meta"><div class="meta-item date"><span class="updated">2 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/michael-witt">Michael Witt</a></span></span></div><div class="meta-item rtime">5 min read</div><div class="meta-item categories"><a href="https://www.upcounsel.com/blog/category/business-resources" rel="category tag">Business Resources</a>, <a href="https://www.upcounsel.com/blog/category/cyber-law-2" rel="category tag">Cyber Law</a>, <a href="https://www.upcounsel.com/blog/category/privacy" rel="category tag">Privacy</a>, <a href="https://www.upcounsel.com/blog/category/startups-and-tech" rel="category tag">Startups &amp; Tech</a></div></div>	</header>
+
+			<div class="entry-content">
+			<p>Size has no bearing on an organization’s GDPR compliance obligations. GDPR requires process and technology changes across many functional areas. UpCounsel attorney Michael Witt...</p>
+		</div>
+	
+				<a href="https://www.upcounsel.com/blog/five-examples-how-gdpr-affects-us-small-businesses" class="vce-read-more">Read more</a>
+	</article>
+
+															<article class="vce-post vce-lay-c post-11104 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources">
+
+		 	<div class="meta-image">
+			<a href="https://www.upcounsel.com/blog/gdpr-keeping-data-safe-on-your-website" title="Keeping Data Safe On Your Website" style="background-image:url('https://www.upcounsel.com/blog/wp-content/uploads/2018/07/GDRP-keeping-website-data-safe-1500x999-692x400.jpg');">
+							</a>
+		</div>
+	
+	<header class="entry-header">
+				<h2 class="entry-title"><a href="https://www.upcounsel.com/blog/gdpr-keeping-data-safe-on-your-website" title="Keeping Data Safe On Your Website">Keeping Data Safe On Your Website</a></h2>
+		<div class="entry-meta"><div class="meta-item date"><span class="updated">2 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/andrew-lachman">Andrew Lachman</a></span></span></div><div class="meta-item rtime">7 min read</div><div class="meta-item categories"><a href="https://www.upcounsel.com/blog/category/business-resources" rel="category tag">Business Resources</a></div></div>	</header>
+
+			<div class="entry-content">
+			<p>More than ever, protecting the data you collect from your website and services is critical to your business.</p>
+		</div>
+	
+				<a href="https://www.upcounsel.com/blog/gdpr-keeping-data-safe-on-your-website" class="vce-read-more">Read more</a>
+	</article>
+
+															<article class="vce-post vce-lay-c post-11051 post type-post status-publish format-standard has-post-thumbnail hentry category-business-resources">
+
+		 	<div class="meta-image">
+			<a href="https://www.upcounsel.com/blog/7-dangers-look-commercial-leases" title="7 Dangers to Look Out for in Commercial Leases" style="background-image:url('https://www.upcounsel.com/blog/wp-content/uploads/2018/06/dangers_lease-692x400.jpg');">
+							</a>
+		</div>
+	
+	<header class="entry-header">
+				<h2 class="entry-title"><a href="https://www.upcounsel.com/blog/7-dangers-look-commercial-leases" title="7 Dangers to Look Out for in Commercial Leases">7 Dangers to Look Out for in Commercial Leases</a></h2>
+		<div class="entry-meta"><div class="meta-item date"><span class="updated">2 years ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://www.upcounsel.com/blog/author/jeff-carson">Jeff Carson</a></span></span></div><div class="meta-item rtime">10 min read</div><div class="meta-item categories"><a href="https://www.upcounsel.com/blog/category/business-resources" rel="category tag">Business Resources</a></div></div>	</header>
+
+			<div class="entry-content">
+			<p>A commercial lease for office or retail space is a serious commitment for your business. Companies make mistakes all the time, and these 7 as the most common.</p>
+		</div>
+	
+				<a href="https://www.upcounsel.com/blog/7-dangers-look-commercial-leases" class="vce-read-more">Read more</a>
+	</article>
+
+									<div class="vce-related-box-clear clearfix"></div>
+											
+		</div>
+
+	</div>
+
+
+  </div>
+
+<script id="mNCC" language="javascript">
+    medianet_width = "728";
+    medianet_height = "90";
+    medianet_crid = "985140068";
+    medianet_versionId = "3111299"; 
+  </script>
+<script src="//contextual.media.net/nmedianet.js?cid=8CU2J5Y9S"></script>
+
+
+<div id="main-box-4" class="main-box clearfix full">
+	<div class="main-box-inside">
+		<div class="CTA-section-PAJ">
+		      <div class="CTA-content">
+			<p class="CTA-title">Post a Job on<br/>
+			<strong>UpCounsel</strong> and get<br/>
+			<strong>high quality</strong> legal work done</p>
+			<a href="/jobs/new" class="CTA-button">Post a Job on UpCounsel</a>
+		      </div>
+		</div>
+	</div>
+</div>
+
+			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
+		</div><!-- close .row -->
+	</div><!-- close .container -->
+</div><!-- close .site-content -->
+
+<footer class="clear">
+
+  <div class="footer bootstrap">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4 f-col">
+          <div class="f-title">Popular Reads This Week</div>
+            <ul id="popular-posts">
+              
+<!-- WordPress Popular Posts Plugin v4.0.13 [PHP] [weekly] [views] [custom] -->
+<li><a href="https://www.upcounsel.com/blog/how-to-turn-your-invention-ideas-into-products"><img width="120" height="120" src="https://www.upcounsel.com/blog/wp-content/uploads/2015/10/tumblr_maos9qPuTM1qiceiuo1_1280-120x120.jpg" class="attachment-popular-post-thumb size-popular-post-thumb wp-post-image" alt="" srcset="https://www.upcounsel.com/blog/wp-content/uploads/2015/10/tumblr_maos9qPuTM1qiceiuo1_1280-120x120.jpg 120w, https://www.upcounsel.com/blog/wp-content/uploads/2015/10/tumblr_maos9qPuTM1qiceiuo1_1280-200x200.jpg 200w" sizes="(max-width: 120px) 100vw, 120px" /><span>How to Turn Your Invention Idea Into a Product</span><br>4 min read</a><li><a href="https://www.upcounsel.com/blog/what-is-the-costs-for-an-employer-to-sponsor-an-h1b-visa"><img width="120" height="120" src="https://www.upcounsel.com/blog/wp-content/uploads/2014/03/passenger-plane-19469_1920-120x120.jpg" class="attachment-popular-post-thumb size-popular-post-thumb wp-post-image" alt="" srcset="https://www.upcounsel.com/blog/wp-content/uploads/2014/03/passenger-plane-19469_1920-120x120.jpg 120w, https://www.upcounsel.com/blog/wp-content/uploads/2014/03/passenger-plane-19469_1920-200x200.jpg 200w" sizes="(max-width: 120px) 100vw, 120px" /><span>How Much Will Sponsoring an H1-B Visa Cost an Employer?</span><br>1 min read</a><li><a href="https://www.upcounsel.com/blog/structure-startups-equity-split-arrangement"><img width="120" height="120" src="https://www.upcounsel.com/blog/wp-content/uploads/2017/05/Equity-120x120.jpg" class="attachment-popular-post-thumb size-popular-post-thumb wp-post-image" alt="" srcset="https://www.upcounsel.com/blog/wp-content/uploads/2017/05/Equity-120x120.jpg 120w, https://www.upcounsel.com/blog/wp-content/uploads/2017/05/Equity-200x200.jpg 200w" sizes="(max-width: 120px) 100vw, 120px" /><span>How to Structure Your Startup's Equity Split Arrangement</span><br>8 min read</a>
+<!-- End WordPress Popular Posts Plugin v4.0.13 -->
+            </ul>
+          </div>
+
+          <div class="col-md-4 f-col f-mid">
+            <div class="f-title">UpCounsel Success Stories</div>
+
+            <ul class="clearfix">
+              <li><a href="/customers/financialforce">Financial Force</a></li>
+              <li><a href="/customers/builtio">built.io</a></li>
+              <li><a href="/customers/charmingcharlie">Charming Charlie</a></li>
+              <li><a href="/customers/signaturescapital">Signatures Capital</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 f-col f-mid">
+            <div class="f-title">Discover UpCounsel</div>
+              <ul class="clearfix">
+                <li class="f-how-it-works"><a href="/howitworks">How It Works</a></li>
+                <li class="f-for-attorneys"><a href="/for-lawyers">For Lawyers</a></li>
+                <li class="f-guides-docs"><a href="/free-legal-documents">Free Legal Documents</a></li>
+                <li class="f-about"><a href="/about">About</a></li>
+                <li class="f-contact"><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+	      </div>
+      </div>
+
+	    <div class="subfooter bootstrap f-grey">
+	      <div class="container">
+
+                <div class="f-bottom">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="f-logo"></div>
+                      <ul class="f-social-media">
+                        <li><a href="http://www.facebook.com/upcounsel" target="_blank" title="Like us on Facebook"><i class="icon-facebook"></i></a></li>
+                        <li><a href="http://twitter.com/upcounsel" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a></li>
+                        <li><a href="http://www.linkedin.com/company/2450634?trk=tyah" target="_blank" title="Connect with us on LinkedIn"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="https://plus.google.com/+Upcounsel" target="_blank" title="Circle us on Google+"><i class="icon-gplus"></i></a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 f-disclaimer">
+                    <div class="f-copyright"><span>&copy; 2020 UpCounsel, Inc.</span></div>
+                    UpCounsel is an interactive online service that makes it faster and easier for businesses to find and hire legal help solely based on their preferences. We are not a law firm, do not provide any legal services, legal advice or "lawyer referral services" and do not provide or participate in any legal representation.
+                    </div>
+                  </div>
+		</div>
+              </div>
+
+          </div>
+        </footer>
+
+</div><!-- #page -->
+
+<div id="back-top"><i class="fontello icon-up-open-1"></i></div>
+
+<script>
+	window.Constants = {
+		site_url: "https://www.upcounsel.com/blog"
+	};
+</script>
+
+<!--www.crestaproject.com Social Button Floating Start--><div id="crestashareicon" class="cresta-share-icon  second_style show-count-active"><div class="sbutton crestaShadow facebook-cresta-share float" id="facebook-cresta"><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.upcounsel.com%2Fblog%2F4-reasons-to-invest-in-commercial-property&amp;t=4+Reasons+to+Invest+in+Commercial+Property" title="Share to Facebook" onclick="window.open(this.href,'targetWindow','toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200');return false;"><i class="cs c-icon-cresta-facebook"></i></a></div><div class="sbutton crestaShadow twitter-cresta-share float withCount" id="twitter-cresta"><a rel="nofollow" href="https://twitter.com/share?text=4+Reasons+to+Invest+in+Commercial+Property&amp;url=https%3A%2F%2Fwww.upcounsel.com%2Fblog%2F4-reasons-to-invest-in-commercial-property&amp;via=upcounsel" title="Share to Twitter" onclick="window.open(this.href,'targetWindow','toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200');return false;"><i class="cs c-icon-cresta-twitter"></i></a></div><div class="sbutton crestaShadow linkedin-cresta-share float" id="linkedin-cresta"><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.upcounsel.com%2Fblog%2F4-reasons-to-invest-in-commercial-property&amp;title=4+Reasons+to+Invest+in+Commercial+Property&amp;source=https://www.upcounsel.com/blog/" title="Share to LinkedIn" onclick="window.open(this.href,'targetWindow','toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200');return false;"><i class="cs c-icon-cresta-linkedin"></i></a></div><div class="sbutton" id="total-shares"><span class="cresta-the-total-count" id="total-count"><i class="cs c-icon-cresta-spinner animate-spin"></i></span><span class="cresta-the-total-text">Shares</span></div><div style="clear: both;"></div></div>
+
+<!--www.crestaproject.com Social Button Floating End-->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var crestaShareSSS = {"FacebookCount":"nope"};
+var crestaShareSS = {"LinkedinCount":"0"};
+var crestaPermalink = {"thePermalink":"https:\/\/www.upcounsel.com\/blog\/4-reasons-to-invest-in-commercial-property","themorezero":"yesmore","themorenumber":"0"};
+/* ]]> */
+</script>
+
+<script type="text/javascript" src="https://www.upcounsel.com/blog/wp-content/cache/minify/95440.js"></script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_widget_notices = {"es_email_notice":"Please enter email address","es_incorrect_email":"Please provide a valid email address","es_load_more":"loading...","es_ajax_error":"Cannot create XMLHTTP instance","es_success_message":"Successfully Subscribed.","es_success_notice":"Your subscription was successful! Within a few minutes, kindly check the mail in your mailbox and confirm your subscription. If you can't see the mail in your mailbox, please check your spam folder.","es_email_exists":"Email Address already exists!","es_error":"Oops.. Unexpected error occurred.","es_invalid_email":"Invalid email address","es_try_later":"Please try after some time","es_problem_request":"There was a problem with the request"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.upcounsel.com/blog/wp-content/cache/minify/c4b2c.js"></script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_widget_page_notices = {"es_email_notice":"Please enter email address","es_incorrect_email":"Please provide a valid email address","es_load_more":"loading...","es_ajax_error":"Cannot create XMLHTTP instance","es_success_message":"Successfully Subscribed.","es_success_notice":"Your subscription was successful! Within a few minutes, kindly check the mail in your mailbox and confirm your subscription. If you can't see the mail in your mailbox, please check your spam folder.","es_email_exists":"Email Address already exists!","es_error":"Oops.. Unexpected error occurred.","es_invalid_email":"Invalid email address","es_try_later":"Please try after some time","es_problem_request":"There was a problem with the request"};
+/* ]]> */
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://www.upcounsel.com/blog/wp-content/cache/minify/5cd8a.js"></script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vce_js_settings = {"sticky_header":"","sticky_header_offset":"700","sticky_header_logo":"","logo_retina":"https:\/\/www.upcounsel.com\/blog\/wp-content\/uploads\/2016\/04\/upcounsel-blog-logo@2x.png","logo_mobile":"","rtl_mode":"0","ajax_url":"https:\/\/www.upcounsel.com\/blog\/wp-admin\/admin-ajax.php","ajax_mega_menu":"1","mega_menu_slider":"","mega_menu_subcats":"","lay_fa_grid_center":"","full_slider_autoplay":"","grid_slider_autoplay":"","fa_big_opacity":{"1":"0.3","2":"0.5"}};
+/* ]]> */
+</script>
+
+<script type="text/javascript" src="https://www.upcounsel.com/blog/wp-content/cache/minify/06dea.js"></script>
+
+<script type="text/javascript">
+				/* <![CDATA[ */
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-2401111353621423", enable_page_level_ads: true }); </script>
+				/* ]]> */
+				</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1613119168925160');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1613119168925160&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+<!-- LinkedIn Insight -->
+<script type="text/javascript">
+_linkedin_data_partner_id = "34133";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<!-- End LinkedIn Insight  -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"54c35762ff","applicationID":"16720247","transactionName":"YVdRYhNWV0cFUkxeC1gdclUVXlZaS0JRWQNaVw==","queueTime":0,"applicationTime":641,"atts":"TRBSFFtMREk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 2013/99 objects using disk
+Page Caching using disk: enhanced (SSL caching disabled) 
+
+Page cache debug info:
+Engine:             disk: enhanced
+Cache key:          
+Creation Time:      1598777497.000s
+Header info:
+X-Powered-By:        PHP/7.1.11
+Content-Type:        text/html; charset=UTF-8
+Link:                <https://www.upcounsel.com/blog/wp-json/>; rel="https://api.w.org/"
+Link:                <https://www.upcounsel.com/blog/?p=5529>; rel=shortlink
+
+Minified using disk
+
+Served from: default_server @ 2020-08-30 01:51:37 by W3 Total Cache
+-->
